@@ -22,13 +22,13 @@ func attack(charName, charClass string) string {
 }
 
 // обратите внимание на "if else" и на "else"
-func defence(char_name, char_class string) string {
-	if char_class == "warrior" {
-		return fmt.Sprintf("%s блокировал %d урона.", char_name, 10+randint(5, 10))
-	} else if char_class == "mage" {
-		return fmt.Sprintf("%s блокировал %d урона.", char_name, 10+randint(-2, 2))
-	} else if char_class == "healer" {
-		return fmt.Sprintf("%s блокировал %d урона.", char_name, 10+randint(2, 5))
+func defence(charName, charClass string) string {
+	if charClass == "warrior" {
+		return fmt.Sprintf("%s блокировал %d урона.", charName, 10+randint(5, 10))
+	} else if charClass == "mage" {
+		return fmt.Sprintf("%s блокировал %d урона.", charName, 10+randint(-2, 2))
+	} else if charClass == "healer" {
+		return fmt.Sprintf("%s блокировал %d урона.", charName, 10+randint(2, 5))
 	}
 	return "неизвестный класс персонажа"
 }
